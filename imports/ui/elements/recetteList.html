@@ -1,4 +1,21 @@
 <template name="recetteList">
-  <p>{{hello}}</p>
-  
+  {{> newRct}}
+  <ul>
+    {{#each recettes}}
+      <li>{{recette.nom}} pour {{recette.quantite}} personnes</li>
+    {{/each}}
+  </ul>
+
+</template>
+
+
+<template name="newRct">
+  <h2>Ajouter une recette</h2>
+  <form class="new-name">
+    <label for="nom">Nom :</label>
+    <input type="text" name="nom" placeholder="Lasagne à la bolognaise">
+    <label for="pers">Nb de personnes :</label>
+    <input type="number" name="pers" placeholder="4">
+    <input type="submit" value="Commencer">
+  </form>
 </template>

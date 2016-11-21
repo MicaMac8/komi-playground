@@ -1,13 +1,6 @@
 <template name="recetteForm">
-  <form name="new-rct" class="recetteForm">
-    <h2>Ajouter une recette</h2>
-    <form name="new-name">
-      <label for="nom">Nom :</label>
-      <input type="text" name="nom" placeholder="Lasagne à la bolognaise">
-      <label for="pers">Nb de personnes :</label>
-      <input type="number" name="pers" placeholder="4">
-      <input type="submit">
-    </form>
+  <div class="recetteForm">
+
     <h3>Ajouter un ingrédient</h3>
     <form name="new-ingredient">
       <label for="ingredient">Ingrédient :</label>
@@ -28,11 +21,13 @@
 
     <h3>Ajouter des instructions</h3>
     <form name="new-instruction">
+      <label for="etape">Titre :</label>
+      <input type="text" name="etape" value="étape 1">
       <textarea name="instrction" form="new-instruction" rows="7" cols="50"></textarea>
       <input type="submit">
     </form>
     <input class="btn" type="submit" value ="Terminer recette">
-  </form>
+  </div>
 
 </template>
 
