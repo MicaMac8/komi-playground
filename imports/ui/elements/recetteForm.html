@@ -1,30 +1,34 @@
 <template name="recetteForm">
-  <h2>Ajouter une recette</h2>
-  <form name="new-rct">
-    <label for="nom">Nom :</label>
-    <input type="text" name="nom" placeholder="Lasagne à la bolognaise">
-    <label for="pers">Nb de personnes :</label>
-    <input type="number" name="pers" placeholder="4">
-    <input type="submit">
+  <form name="new-rct" class="recetteForm">
+    <h2>Ajouter une recette</h2>
+    <form name="new-name">
+      <label for="nom">Nom :</label>
+      <input type="text" name="nom" placeholder="Lasagne à la bolognaise">
+      <label for="pers">Nb de personnes :</label>
+      <input type="number" name="pers" placeholder="4">
+      <input type="submit">
+    </form>
+    <h3>Ajouter un ingrédient</h3>
+    <form name="new-ingredient">
+      <label for="ingredient">Ingrédient :</label>
+      <input type="text" name="ingredient" placeholder="lait">
+      <label for="quantite">Quantité :</label>
+      <input type="number" name="quantite" placeholder="500">
+      <input list="nature">
+      <datalist id="nature">
+        <option value="g"></option>
+        <option value="ml"></option>
+        <option value="pièce"></option>
+        <option value="sachet"></option>
+      </datalist>
+      <input type="submit">
+    </form>
+    <h3>Ajouter des instructions</h3>
+    <form name="new-instruction">
+      <textarea name="instrction" form="new-instruction" rows="8" cols="25"></textarea>
+      <input type="submit">
+    </form>
+    <input type="submit" value ="Terminer">
   </form>
-  <h3>Ajouter un ingrédient</h3>
-  <form name="new-ingredient">
-    <label for="ingredient">Ingrédient :</label>
-    <input type="text" name="ingredient" placeholder="lait">
-    <label for="quantite">Quantité :</label>
-    <input type="number" name="quantite" placeholder="500">
-    <input list="nature">
-    <datalist id="nature">
-      <option value="g"></option>
-      <option value="ml"></option>
-      <option value="pièce"></option>
-      <option value="sachet"></option>
-    </datalist>
-    <input type="submit">
-  </form>
-  <h3>Ajouter des instructions</h3>
-  <form name="new-instruction">
-    <textarea name="instrction" form="new-instruction" rows="8" cols="25"></textarea>
-    <input type="submit">
-  </form>
+
 </template>
