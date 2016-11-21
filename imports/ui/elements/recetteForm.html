@@ -12,23 +12,35 @@
     <form name="new-ingredient">
       <label for="ingredient">Ingrédient :</label>
       <input type="text" name="ingredient" placeholder="lait">
+
       <label for="quantite">Quantité :</label>
       <input type="number" name="quantite" placeholder="500">
-      <input list="nature">
-      <datalist id="nature">
-        <option value="g"></option>
-        <option value="ml"></option>
-        <option value="pièce"></option>
-        <option value="sachet"></option>
-      </datalist>
+
+      <select name="nature" placeholder="ml">
+        <option value="ml">ml</option>
+        <option value="g">g</option>
+        <option value="pièce">pièce</option>
+        <option value="sachet">sachet</option>
+      </select>
       <input type="submit">
+      {{> ingredients}}
     </form>
+
     <h3>Ajouter des instructions</h3>
     <form name="new-instruction">
-      <textarea name="instrction" form="new-instruction" rows="8" cols="25"></textarea>
+      <textarea name="instrction" form="new-instruction" rows="7" cols="50"></textarea>
       <input type="submit">
     </form>
-    <input type="submit" value ="Terminer">
+    <input class="btn" type="submit" value ="Terminer recette">
   </form>
 
+</template>
+
+<template name="ingredients">
+  <ul>
+   <!-- for each nouvel ingredient -->
+    <li>ingredient 1</li>
+    <li>ingredient 2</li>
+    <li>ingredient 3</li>
+  </ul>
 </template>
